@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Tag from './Tag';
 import { useEffect } from 'react';
 import { fetchTags } from '../../features/tags/tagsSlice';
-import Loading from '../ui/Loading';
+
 
 const Tags = () => {
     const { tags } = useSelector((state) => state.tags)

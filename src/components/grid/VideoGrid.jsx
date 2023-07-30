@@ -7,9 +7,10 @@ import Loading from "../ui/Loading";
 const VideoGrid = () => {
     const { videos, isLoading, isError, error } = useSelector((state) => state.videos)
     const dispatch = useDispatch();
+    const { tags, search } = useSelector(state => state.filter)
     useEffect(() => {
-        dispatch(fetchVideos())
-    }, [dispatch])
+        dispatch(fetchVideos({ tags, search }))
+    }, [dispatch, tags, search])
     let content;
     if (isLoading) content = <Loading></Loading>
     if (!isLoading && isError)

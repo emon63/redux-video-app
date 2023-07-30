@@ -3,12 +3,12 @@ const Player = ({ link, title }) => {
     return (
         <iframe
             width="100%"
-            class="aspect-video"
+            className="aspect-video"
             src={link}
             title={title}
-            frameborder=""
+            frameBorder=""
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
         ></iframe>
     );
 };
